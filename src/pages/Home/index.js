@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Layout, Menu, Carousel, Divider } from 'antd';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
+import Actividades from 'sections/Actividades';
 
 import './styles.css';
-import { useState } from 'react/cjs/react.development';
 
 const Home = () => {
   const { Header, Content, Footer } = Layout;
@@ -77,6 +77,8 @@ const Home = () => {
           </div>
 
           <Divider orientation="left">Actividades</Divider>
+
+          <Actividades />
 
         </div>
       </Content>
