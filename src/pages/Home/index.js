@@ -1,11 +1,31 @@
+import { useEffect } from 'react';
 import { Layout, Menu, Carousel, Divider } from 'antd';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 
 import './styles.css';
+import { useState } from 'react/cjs/react.development';
 
 const Home = () => {
   const { Header, Content, Footer } = Layout;
+  const [sliderHeight, setSliderHeight] = useState('100vh');
+  const slides = ['slide-1', 'slide-2', 'slide-3'];
+
+  useEffect(() => {
+    const onResize = () => {
+      const screenWidth = window.innerWidth;
+      const screenSliderHeight = Math.round(screenWidth / 1.78);
+      const stringHeight = `${screenSliderHeight}px`
+
+      setSliderHeight(stringHeight);
+    }
+
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    }
+  }, []);
 
   return (
     <Layout>
@@ -22,28 +42,30 @@ const Home = () => {
         </div>
       </Header>
 
-      <Content className="site-layout" style={{ padding: '0', margin: '0 auto'}}>
-        <div className="site-layout-background" style={{ padding: '0', minHeight: '100vh', margin: '0 auto' }}>
+      <Content className="site-layout" style={{ padding: '0', margin: '64px auto 0 auto'}}>
+        <div
+          className="site-layout-background"
+          style={{
+            padding: '0',
+            margin: '0 auto',
+            minHeight: sliderHeight,
+            height: sliderHeight,
+            maxHeight: 'calc(100vh - 64px)'
+          }}
+        >
           <Carousel autoplay style={{maxWidth: '100vw'}}>
-            <div>
-              <div className='slide-image slide-1' />
-            </div>
-            <div>
-              <div className='slide-image slide-2' />
-            </div>
-            <div>
-              <div className='slide-image slide-3' />
-            </div>
-            <div>
-              <div className='slide-image slide-4' />
-            </div>
-            <div>
-              <div className='slide-image slide-5' />
-            </div>
+            {slides.map((slide, index) => (
+              <div key={index}>
+                <div className={`slide-image ${slide}`} style={{ height: sliderHeight }}/>
+              </div>
+            ))}
           </Carousel>
         </div>
 
-        <div className="site-layout-background" style={{ padding: '24px 0', minHeight: '100vh', maxWidth: 1400, margin: '0 auto' }}>
+        <div
+          className="site-layout-background"
+          style={{ padding: '24px 0', minHeight: '100vh', maxWidth: 1400, margin: '0 auto' }}
+        >
           <Divider orientation="left">Seguinos en Twitter</Divider>
 
           <div className='twitter-container'>
@@ -53,6 +75,8 @@ const Home = () => {
               options={{height: 800, with: '90vw'}}
             />
           </div>
+
+          <Divider orientation="left">Actividades</Divider>
 
         </div>
       </Content>
