@@ -9,10 +9,10 @@ const Home = () => {
 
   return (
     <Layout>
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
         <div className='header-content'>
           <div className="logo" />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+          <Menu mode="horizontal" defaultSelectedKeys={['1']} style={{justifyContent: 'end'}}>
             <Menu.Item key="1">Inicio</Menu.Item>
             <Menu.Item key="2">El club</Menu.Item>
             <Menu.Item key="3">Actividades</Menu.Item>
@@ -22,8 +22,8 @@ const Home = () => {
         </div>
       </Header>
 
-      <Content className="site-layout" style={{ padding: '0', maxWidth: 1400, margin: '64px auto'}}>
-        <div className="site-layout-background" style={{ padding: '24px 0', minHeight: '100vh' }}>
+      <Content className="site-layout" style={{ padding: '0', margin: '0 auto'}}>
+        <div className="site-layout-background" style={{ padding: '0', minHeight: '100vh', margin: '0 auto' }}>
           <Carousel autoplay style={{maxWidth: '100vw'}}>
             <div>
               <div className='slide-image slide-1' />
@@ -41,7 +41,9 @@ const Home = () => {
               <div className='slide-image slide-5' />
             </div>
           </Carousel>
+        </div>
 
+        <div className="site-layout-background" style={{ padding: '24px 0', minHeight: '100vh', maxWidth: 1400, margin: '0 auto' }}>
           <Divider orientation="left">Seguinos en Twitter</Divider>
 
           <div className='twitter-container'>
