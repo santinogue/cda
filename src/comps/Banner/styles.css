@@ -1,0 +1,11 @@
+.banner-overlay {
+  font-size: 40px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #000000a6;
+  color: #eff2f5;
+}

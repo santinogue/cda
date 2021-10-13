@@ -4,6 +4,9 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import Activities from 'sections/Activities';
 import Schedule from 'sections/Schedule';
+import Contact from 'sections/Contact';
+import Banner from 'comps/Banner';
+import Staf from 'sections/Staf';
 
 import './styles.css';
 
@@ -84,6 +87,17 @@ const Home = () => {
           <Divider orientation="left">Horarios</Divider>
 
           <Schedule />
+        </div>
+
+        <Banner imageSrc='banner2.png' text='Staf' />
+
+        <div
+          className="site-layout-background"
+          style={{ padding: '24px 0', minHeight: '100vh', maxWidth: 1400, margin: '0 auto' }}
+        >
+          <Staf />
+
+          <Contact />
 
         </div>
       </Content>

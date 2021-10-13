@@ -7,9 +7,12 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.16.13",
+    "mapbox-gl": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-parallax": "^3.3.0",
     "react-scripts": "4.0.3",
+    "react-scroll-parallax": "^2.4.0",
     "react-twitter-embed": "^3.0.3",
     "web-vitals": "^1.0.1"
   },
