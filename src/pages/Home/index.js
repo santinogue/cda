@@ -2,14 +2,15 @@ import { useEffect, useState } from 'react';
 import { Layout, Menu, Carousel, Divider } from 'antd';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
-import Actividades from 'sections/Actividades';
+import Activities from 'sections/Activities';
+import Schedule from 'sections/Schedule';
 
 import './styles.css';
 
 const Home = () => {
   const { Header, Content, Footer } = Layout;
   const [sliderHeight, setSliderHeight] = useState('100vh');
-  const slides = ['slide-1', 'slide-2', 'slide-3'];
+  const slides = ['slide-1', 'slide-2', 'slide-3', 'slide-4'];
 
   useEffect(() => {
     const onResize = () => {
@@ -78,7 +79,11 @@ const Home = () => {
 
           <Divider orientation="left">Actividades</Divider>
 
-          <Actividades />
+          <Activities />
+
+          <Divider orientation="left">Horarios</Divider>
+
+          <Schedule />
 
         </div>
       </Content>

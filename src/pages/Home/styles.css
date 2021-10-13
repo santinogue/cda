@@ -37,6 +37,10 @@
   background-image: url(/src/images/club/bg3.png);
 }
 
+.slide-image.slide-4 {
+  background-image: url(/src/images/club/bg4.png);
+}
+
 .twitter-container {
   width: 100%;
   display: flex;
