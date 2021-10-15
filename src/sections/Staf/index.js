@@ -12,6 +12,9 @@ const Staf = () => {
   currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
   const breakpointsFlex = {xs: 100, sm: 100, md: 50, lg: 33, xl: 33, xxl: 33};
 
+  const smallScreen = ['xs', 'sm'].includes(currentBreakpoint);
+  const rowStyle = smallScreen ? {} : {margin: 0};
+
   const fstRow = [...Array(5).keys()];
 
   const renderActivity = index => {
@@ -19,12 +22,13 @@ const Staf = () => {
     const smallestBreakPoint = currentBreakpoint === 'xs';
 
     return (
-      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
+      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`} style={{maxWidth: '100vw'}}>
         <Card
           style={{ width: '100%', margin: '5px 0 5px' }}
           cover={
             <img
               alt="example"
+              style={{maxWidth: '100vw'}}
               src={require(`images/${stafData.image}`).default}
             />
           }
@@ -40,7 +44,7 @@ const Staf = () => {
 
   return (
     <>
-      <Row gutter={[16, 16]}>
+      <Row gutter={[16, 16]} style={rowStyle}>
         {fstRow.map(e => renderActivity(e))}
       </Row>
     </>

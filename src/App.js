@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 

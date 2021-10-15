@@ -1,8 +1,42 @@
 .section-container {
   width: 100%;
+  box-shadow: 6px 4px 5px 0px black;
 }
 
 .title-container h1 {
   font-size: 40px;
   margin: 26px 0 50px 0;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .title-container h1 {
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -webkit-animation: text-enter 25.5s 1;
+    animation: text-enter 25.5s 1;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
+  }
+}
+
+@-webkit-keyframes text-enter {
+  from {
+      transform: translateX(300%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes text-enter {
+   from {
+         transform: translateX(300%);
+   }
+   to {
+       transform: translateX(0);
+   }
 }

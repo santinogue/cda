@@ -27,3 +27,33 @@ label {
   color: white !important;
   font-weight: 600 !important;
 }
+
+.pages-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pages-list > * {
+  margin-bottom: 4px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-list > * {
+  margin-bottom: 4px;
+}
+
+.info-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-list span {
+  margin-right: 10px;
+}

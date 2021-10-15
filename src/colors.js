@@ -1,5 +1,5 @@
 const colors = {
-  red: '#e96264',
+  red: '#ac2427',
   red2: '#e96264',
   blue: '#171742',
 };

@@ -1,9 +1,19 @@
-import { Divider } from 'antd';
+import { Grid } from 'antd';
 
 import './styles.css';
 
 const Section = ({ children, title, style, bgColor, fontColor, theme = 'light' }) => {
   const backgroundColor = theme === 'light' ? '#fff' : '#eff2f5';
+
+  const { useBreakpoint } = Grid;
+  const screens = useBreakpoint();
+
+  let currentBreakpoint = Object.entries(screens).filter(screen => !!screen[1]);
+  currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
+  currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
+  const fontSizeBreakpoints = {xs: 24, sm: 32, md: 64};
+
+  const titleStyle = { fontSize: `${fontSizeBreakpoints[currentBreakpoint]}px` }
 
   return (
     <div className='section-container' style={{backgroundColor: bgColor || backgroundColor}}>
@@ -21,7 +31,7 @@ const Section = ({ children, title, style, bgColor, fontColor, theme = 'light' }
 
         {title &&
           <div className='title-container'>
-            <h1 style={{color: fontColor}}>{title}</h1>
+            <h1 style={{color: fontColor, ...titleStyle}}>{title}</h1>
           </div>
         }
 

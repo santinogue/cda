@@ -1,5 +1,8 @@
 import { Row, Col, Grid } from 'antd';
 import { Form, Input, Button } from 'antd';
+import { MailFilled, PhoneFilled } from '@ant-design/icons';
+
+import Logo from 'images/logo_hd.png';
 
 import './styles.css';
 
@@ -12,16 +15,103 @@ const Contact = () => {
   currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
   const breakpointsFlex = {xs: 100, sm: 100, md: 50, lg: 50, xl: 50, xxl: 50};
 
-  return (
-    <Row gutter={[16, 16]}>
-      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
-        <Map />
-      </Col>
+  const pStyle = {
+    color: 'white',
+    fontSize: '16px',
+    margin: 0,
+  }
 
-      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
-        <EmailForm />
-      </Col>
-    </Row>
+  const smallScreen = breakpointsFlex[currentBreakpoint] > 50
+  const ftsColumStyle = { minWidth: smallScreen ? '50%' : null};
+  const sndColumStyle = { minWidth: smallScreen ? '50%' : null};
+  const thrColumStyle = {
+    minWidth: smallScreen ? '100%' : null,
+    marginTop: smallScreen ? '50px' : null,
+    borderLeft: smallScreen ? 'none' : '0.5px solid #e96264'
+  };
+
+  return (
+    <>
+      <Row gutter={[16, 16]}>
+        <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
+          <Map />
+        </Col>
+
+        <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
+          <EmailForm />
+        </Col>
+      </Row>
+
+      <Row style={{margin: '100px 0'}}>
+        <Col
+          span={8}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            ...ftsColumStyle,
+          }}
+        >
+          <img src={Logo} atl='logo' style={{width: '100px'}} />
+        </Col>
+
+        <Col span={8}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            borderLeftColor: '#e96264',
+            borderLeftWidth: '0.5px',
+            borderLeftStyle: 'solid',
+            padding: '0 5%',
+            ...sndColumStyle,
+          }}
+        >
+          <Row>
+            <Col span={12} style={{minWidth: '100px'}}>
+              <div className='pages-list'>
+                <a>Inicio</a>
+                <a>Noticias</a>
+                <a>Actividades</a>
+              </div>
+            </Col>
+
+            <Col span={12} style={{minWidth: '100px'}}>
+              <div className='pages-list'>
+                <a>Horarios</a>
+                <a>Staf</a>
+                <a>El Club</a>
+              </div>
+            </Col>
+          </Row>
+        </Col>
+
+        <Col span={8}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderLeftColor: '#e96264',
+            borderLeftWidth: '0.5px',
+            borderLeftStyle: 'solid',
+            ...thrColumStyle,
+          }}
+        >
+          <div className='info-list'>
+            <div className='info-list-item'>
+              <MailFilled style={{color: '#fff'}} />
+              <p style={pStyle}>info@cdalbatros.com.uy</p>
+            </div>
+
+            <div className='info-list-item'>
+              <PhoneFilled style={{color: '#fff'}}/>
+              <p style={pStyle}>23056789</p>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </>
   )
 };
 
@@ -38,8 +128,7 @@ const EmailForm = () => {
 
   const tailLayout = {
     wrapperCol: {
-      offset: 4,
-      span: 16,
+      span: 24,
     },
   };
 

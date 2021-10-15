@@ -34,10 +34,27 @@ const Home = () => {
 
   return (
     <Layout>
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
+      <Header
+        style={{
+          zIndex: 1,
+          width: '100%',
+          position: 'fixed',
+          background: '#171742',
+          boxShadow: '1px 1px 9px black'
+        }
+      }>
         <div className='header-content'>
           <div className="logo" />
-          <Menu mode="horizontal" defaultSelectedKeys={['1']} style={{justifyContent: 'end'}}>
+          <Menu
+            mode="horizontal"
+            defaultSelectedKeys={['1']}
+            style={{
+              color: '#fff',
+              justifyContent: 'end',
+              background: '#171742',
+              borderBottom: 'none'
+            }}
+          >
             <Menu.Item key="1">Inicio</Menu.Item>
             <Menu.Item key="2">El club</Menu.Item>
             <Menu.Item key="3">Actividades</Menu.Item>
@@ -53,7 +70,6 @@ const Home = () => {
           style={{
             padding: '0',
             margin: '0 auto',
-            minHeight: sliderHeight,
             height: sliderHeight,
             maxHeight: 'calc(100vh - 64px)'
           }}
@@ -89,7 +105,7 @@ const Home = () => {
           <Staf />
         </Section>
 
-        <Section title='Ponete en Contacto' bgColor='#171742' fontColor='#fff'>
+        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff'>
             <Contact />
         </Section>
       </Content>
