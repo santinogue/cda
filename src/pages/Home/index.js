@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Layout, Menu, Carousel, Divider } from 'antd';
+import { Layout, Menu, Carousel } from 'antd';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import Activities from 'sections/Activities';
+import PageFooter from 'comps/PageFooter';
 import Schedule from 'sections/Schedule';
 import Contact from 'sections/Contact';
-import Banner from 'comps/Banner';
+import Section from 'comps/Section';
 import Staf from 'sections/Staf';
 
 import './styles.css';
@@ -66,12 +67,7 @@ const Home = () => {
           </Carousel>
         </div>
 
-        <div
-          className="site-layout-background"
-          style={{ padding: '24px 0', minHeight: '100vh', maxWidth: 1400, margin: '0 auto' }}
-        >
-          <Divider orientation="left">Seguinos en Twitter</Divider>
-
+        <Section title='Seguinos en Twitter' theme='dark'>
           <div className='twitter-container'>
             <TwitterTimelineEmbed
               sourceType="profile"
@@ -79,29 +75,26 @@ const Home = () => {
               options={{height: 800, with: '90vw'}}
             />
           </div>
+        </Section>
 
-          <Divider orientation="left">Actividades</Divider>
-
+        <Section title='Actividades'>
           <Activities />
+        </Section>
 
-          <Divider orientation="left">Horarios</Divider>
-
+        <Section title='Horarios'>
           <Schedule />
-        </div>
+        </Section>
 
-        <Banner imageSrc='banner2.png' text='Staf' />
-
-        <div
-          className="site-layout-background"
-          style={{ padding: '24px 0', minHeight: '100vh', maxWidth: 1400, margin: '0 auto' }}
-        >
+        <Section title='Nuestro Staf' theme='dark'>
           <Staf />
+        </Section>
 
-          <Contact />
-
-        </div>
+        <Section title='Ponete en Contacto' bgColor='#171742' fontColor='#fff'>
+            <Contact />
+        </Section>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Club Deportivo Albatros 2021</Footer>
+
+      <PageFooter />
     </Layout>
   );
 };

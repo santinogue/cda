@@ -1,5 +1,7 @@
 .map-container {
   height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .map-container iframe {
@@ -19,4 +21,9 @@
 form {
   width: 100%;
   padding: 0 40px !important;
+}
+
+label {
+  color: white !important;
+  font-weight: 600 !important;
 }
