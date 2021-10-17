@@ -4,7 +4,7 @@ import LazyShow from 'comps/LazyShow';
 
 import './styles.css';
 
-const Section = ({ children, title, style, bgColor, fontColor, theme = 'light' }) => {
+const Section = ({ children, id, title, style, bgColor, fontColor, theme = 'light' }) => {
   const backgroundColor = theme === 'light' ? '#fff' : '#eff2f5';
 
   const { useBreakpoint } = Grid;
@@ -18,7 +18,7 @@ const Section = ({ children, title, style, bgColor, fontColor, theme = 'light' }
   const titleStyle = { fontSize: `${fontSizeBreakpoints[currentBreakpoint]}px` }
 
   return (
-    <div className='section-container' style={{backgroundColor: bgColor || backgroundColor}}>
+    <div className='section-container' style={{backgroundColor: bgColor || backgroundColor}} id={id}>
       <div
         className="site-layout-background"
         style={{

@@ -13,7 +13,7 @@ import Staf from 'sections/Staf';
 import './styles.css';
 
 const Home = () => {
-  const { Header, Content, Footer } = Layout;
+  const { Header, Content } = Layout;
   const [sliderHeight, setSliderHeight] = useState('100vh');
   const slides = ['slide-1', 'slide-2', 'slide-3', 'slide-4'];
 
@@ -34,6 +34,14 @@ const Home = () => {
       window.removeEventListener('resize', onResize);
     }
   }, []);
+
+  const onGoToSection = sectionId => {
+    document.querySelector(`#${sectionId}`).scrollIntoView({
+        behavior: 'smooth'
+    });
+  };
+
+  const onGoToPage = () => {};
 
   return (
     <Layout>
@@ -58,17 +66,20 @@ const Home = () => {
               borderBottom: 'none'
             }}
           >
-            <Menu.Item key="1">Inicio</Menu.Item>
-            <Menu.Item key="2">El club</Menu.Item>
-            <Menu.Item key="3">Actividades</Menu.Item>
-            <Menu.Item key="4">Horarios</Menu.Item>
-            <Menu.Item key="5">Contacto</Menu.Item>
+            <Menu.Item onClick={() => onGoToSection('section_1')} key="1">Inicio</Menu.Item>
+            <Menu.Item onClick={() => onGoToSection('section_2')} key="2">Noticias</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('club')} key="3">El club</Menu.Item>
+            <Menu.Item onClick={() => onGoToSection('section_3')} key="4">Actividades</Menu.Item>
+            <Menu.Item onClick={() => onGoToSection('section_4')} key="5">Horarios</Menu.Item>
+            <Menu.Item onClick={() => onGoToSection('section_5')} key="6">Staf</Menu.Item>
+            <Menu.Item onClick={() => onGoToSection('section_6')} key="7">Contacto</Menu.Item>
           </Menu>
         </div>
       </Header>
 
       <Content className="site-layout" style={{ padding: '0', margin: '64px auto 0 auto'}}>
         <div
+          id='section_1'
           className="site-layout-background"
           style={{
             padding: '0',
@@ -86,7 +97,7 @@ const Home = () => {
           </Carousel>
         </div>
 
-        <Section title='Seguinos en Twitter' theme='dark'>
+        <Section title='Seguinos en Twitter' theme='dark' id='section_2'>
           <div className='twitter-container'>
             <TwitterTimelineEmbed
               sourceType="profile"
@@ -96,19 +107,19 @@ const Home = () => {
           </div>
         </Section>
 
-        <Section title='Actividades'>
+        <Section title='Actividades' id='section_3'>
           <Activities />
         </Section>
 
-        <Section title='Horarios'>
+        <Section title='Horarios' id='section_4'>
           <Schedule />
         </Section>
 
-        <Section title='Nuestro Staf' theme='dark'>
+        <Section title='Nuestro Staf' theme='dark' id='section_5'>
           <Staf />
         </Section>
 
-        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff'>
+        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6'>
             <Contact />
         </Section>
       </Content>

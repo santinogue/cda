@@ -31,6 +31,14 @@ const Contact = () => {
     borderLeft: smallScreen ? 'none' : '0.5px solid #e96264'
   };
 
+  const onGoToSection = sectionId => {
+    document.querySelector(`#${sectionId}`).scrollIntoView({
+        behavior: 'smooth'
+    });
+  };
+
+  const onGoToPage = () => {};
+
   return (
     <>
       <Row gutter={[16, 16]}>
@@ -75,17 +83,17 @@ const Contact = () => {
           <Row>
             <Col span={12} style={{minWidth: '100px'}}>
               <div className='pages-list'>
-                <a>Inicio</a>
-                <a>Noticias</a>
-                <a>Actividades</a>
+                <a onClick={() => onGoToSection('section_1')}>Inicio</a>
+                <a onClick={() => onGoToSection('section_2')}>Noticias</a>
+                <a onClick={() => onGoToSection('section_3')}>Actividades</a>
               </div>
             </Col>
 
             <Col span={12} style={{minWidth: '100px'}}>
               <div className='pages-list'>
-                <a>Horarios</a>
-                <a>Staf</a>
-                <a>El Club</a>
+                <a onClick={() => onGoToSection('section_4')}>Horarios</a>
+                <a onClick={() => onGoToSection('section_5')}>Staf</a>
+                <a onClick={() => onGoToPage('club')}>El Club</a>
               </div>
             </Col>
           </Row>

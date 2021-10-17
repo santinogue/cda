@@ -6,7 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Home from './pages/Home';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <ParallaxProvider>
