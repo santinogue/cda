@@ -21,6 +21,7 @@ const Banner = ({imageSrc, text}) => {
           },
       ]}
       style={{
+          width: '100vw',
           height: '500px',
       }}
     >

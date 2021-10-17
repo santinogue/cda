@@ -7,7 +7,7 @@ import LazyShow from 'comps/LazyShow';
 
 import './styles.css';
 
-const Contact = () => {
+const Contact = ({ hideLastRow }) => {
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
 
@@ -55,7 +55,7 @@ const Contact = () => {
         </Col>
       </Row>
 
-      <Row style={{margin: '100px 0'}}>
+      {!hideLastRow && <Row style={{margin: '100px 0'}}>
         <Col
           span={8}
           style={{
@@ -123,7 +123,7 @@ const Contact = () => {
             </div>
           </div>
         </Col>
-      </Row>
+      </Row>}
     </>
   )
 };

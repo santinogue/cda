@@ -1,29 +1,41 @@
 import { useEffect, useState } from 'react';
-import { Layout, Menu, Carousel } from 'antd';
+import { Carousel, Grid } from 'antd';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import Activities from 'sections/Activities';
-import PageFooter from 'comps/PageFooter';
 import Schedule from 'sections/Schedule';
 import Contact from 'sections/Contact';
-import Whatsapp from 'comps/Whatsapp';
 import Section from 'comps/Section';
 import Staf from 'sections/Staf';
+import PageLayout from 'comps/Layout';
 
 import './styles.css';
 
 const Home = () => {
-  const { Header, Content } = Layout;
   const [sliderHeight, setSliderHeight] = useState('100vh');
   const slides = ['slide-1', 'slide-2', 'slide-3', 'slide-4'];
+
+  const { useBreakpoint } = Grid;
+  const screens = useBreakpoint();
+
+  let currentBreakpoint = Object.entries(screens).filter(screen => !!screen[1]);
+  currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
+  currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
+  const smallScreen = ['xs', 'sm', 'md'].includes(currentBreakpoint);
 
   useEffect(() => {
     const onResize = () => {
       const screenWidth = window.innerWidth;
       const screenSliderHeight = Math.round(screenWidth / 1.78);
-      const stringHeight = `${screenSliderHeight}px`
 
-      setSliderHeight(stringHeight);
+      setSliderHeight(screenSliderHeight);
+      updateTwitterTimelineHeight();
+    }
+
+    const updateTwitterTimelineHeight = () => {
+      const carouselHeight = document.getElementsByClassName('ant-carousel')[0].offsetHeight;
+      const twitterTimeline = document.getElementsByClassName('twitter-timeline')[0];
+      if (twitterTimeline && !smallScreen) twitterTimeline.style.height =  `${carouselHeight - 80}px`;
     }
 
     window.addEventListener('resize', onResize);
@@ -33,51 +45,15 @@ const Home = () => {
     return () => {
       window.removeEventListener('resize', onResize);
     }
-  }, []);
+  }, [smallScreen]);
 
-  const onGoToSection = sectionId => {
-    document.querySelector(`#${sectionId}`).scrollIntoView({
-        behavior: 'smooth'
-    });
-  };
-
-  const onGoToPage = () => {};
+  const onLoadTwitter = () => {
+    const carouselHeight = document.getElementsByClassName('ant-carousel')[0].offsetHeight;
+    document.getElementsByClassName('twitter-timeline')[0].style.height =  `${carouselHeight - 80}px`;
+  }
 
   return (
-    <Layout>
-      <Header
-        style={{
-          zIndex: 20,
-          width: '100%',
-          position: 'fixed',
-          background: '#171742',
-          boxShadow: '1px 1px 9px black'
-        }
-      }>
-        <div className='header-content'>
-          <div className="logo" />
-          <Menu
-            mode="horizontal"
-            defaultSelectedKeys={['1']}
-            style={{
-              color: '#fff',
-              justifyContent: 'end',
-              background: '#171742',
-              borderBottom: 'none'
-            }}
-          >
-            <Menu.Item onClick={() => onGoToSection('section_1')} key="1">Inicio</Menu.Item>
-            <Menu.Item onClick={() => onGoToSection('section_2')} key="2">Noticias</Menu.Item>
-            <Menu.Item onClick={() => onGoToPage('club')} key="3">El club</Menu.Item>
-            <Menu.Item onClick={() => onGoToSection('section_3')} key="4">Actividades</Menu.Item>
-            <Menu.Item onClick={() => onGoToSection('section_4')} key="5">Horarios</Menu.Item>
-            <Menu.Item onClick={() => onGoToSection('section_5')} key="6">Staf</Menu.Item>
-            <Menu.Item onClick={() => onGoToSection('section_6')} key="7">Contacto</Menu.Item>
-          </Menu>
-        </div>
-      </Header>
-
-      <Content className="site-layout" style={{ padding: '0', margin: '64px auto 0 auto'}}>
+      <PageLayout>
         <div
           id='section_1'
           className="site-layout-background"
@@ -85,19 +61,30 @@ const Home = () => {
             padding: '0',
             margin: '0 auto',
             height: sliderHeight,
-            maxHeight: 'calc(100vh - 64px)'
+            maxHeight: 'calc(100vh - 64px)',
+            overflow: 'hidden',
+            position: 'relative',
           }}
         >
           <Carousel autoplay style={{maxWidth: '100vw'}}>
             {slides.map((slide, index) => (
               <div key={index}>
-                <div className={`slide-image ${slide}`} style={{ height: sliderHeight }}/>
+                <div className={`slide-image ${slide}`} style={{ height: `${sliderHeight}px` }}/>
               </div>
             ))}
           </Carousel>
+
+          {!smallScreen && <div className='twitter-container-small'>
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="CDAlbatros1941"
+              onLoad={onLoadTwitter}
+              options={{height: `${sliderHeight - 30}px`, with: '90vw'}}
+            />
+          </div>}
         </div>
 
-        <Section title='Seguinos en Twitter' theme='dark' id='section_2'>
+        {smallScreen && <Section title='Seguinos en Twitter' theme='dark' id='section_2'>
           <div className='twitter-container'>
             <TwitterTimelineEmbed
               sourceType="profile"
@@ -105,7 +92,7 @@ const Home = () => {
               options={{height: 800, with: '90vw'}}
             />
           </div>
-        </Section>
+        </Section>}
 
         <Section title='Actividades' id='section_3'>
           <Activities />
@@ -122,12 +109,7 @@ const Home = () => {
         <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6'>
             <Contact />
         </Section>
-      </Content>
-
-      <PageFooter />
-
-      <Whatsapp />
-    </Layout>
+      </PageLayout>
   );
 };
 

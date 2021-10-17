@@ -43,7 +43,13 @@
 
 .twitter-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0 5%;
+}
+
+.twitter-container-small {
+  width: 25%;
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
