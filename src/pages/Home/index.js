@@ -6,6 +6,7 @@ import Activities from 'sections/Activities';
 import PageFooter from 'comps/PageFooter';
 import Schedule from 'sections/Schedule';
 import Contact from 'sections/Contact';
+import Whatsapp from 'comps/Whatsapp';
 import Section from 'comps/Section';
 import Staf from 'sections/Staf';
 
@@ -27,6 +28,8 @@ const Home = () => {
 
     window.addEventListener('resize', onResize);
 
+    onResize();
+
     return () => {
       window.removeEventListener('resize', onResize);
     }
@@ -36,7 +39,7 @@ const Home = () => {
     <Layout>
       <Header
         style={{
-          zIndex: 1,
+          zIndex: 20,
           width: '100%',
           position: 'fixed',
           background: '#171742',
@@ -111,6 +114,8 @@ const Home = () => {
       </Content>
 
       <PageFooter />
+
+      <Whatsapp />
     </Layout>
   );
 };

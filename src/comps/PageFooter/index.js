@@ -12,7 +12,11 @@ const PageFooter = () => {
   let currentBreakpoint = Object.entries(screens).filter(screen => !!screen[1]);
   currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
   currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
-  const breakpointsFlex = {xs: 100, sm: 100, md: 50, lg: 50, xl: 25, xxl: 50};
+  const breakpointsFlex = {xs: 100, sm: 100, md: 50, lg: 50, xl: 50, xxl: 50};
+
+  const onMediaClick = url => {
+    window.open(url, '_blank').focus();
+  }
 
   return (
     <Footer style={{ textAlign: 'center', background: '#ac2427', color: '#fff'}}>
@@ -23,9 +27,20 @@ const PageFooter = () => {
 
         <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
           <div className='media-container'>
-            <InstagramFilled style={{color: '#fff', fontSize: '20px'}}/>
-            <FacebookFilled style={{color: '#fff', fontSize: '20px'}}/>
-            <TwitterSquareFilled style={{color: '#fff', fontSize: '20px'}}/>
+            <InstagramFilled
+              style={{color: '#fff', fontSize: '20px', cursor: 'pointer'}}
+              onClick={() => onMediaClick('https://www.instagram.com/club_deportivo_albatros')}
+            />
+
+            <FacebookFilled
+              style={{color: '#fff', fontSize: '20px', cursor: 'pointer'}}
+              onClick={() => onMediaClick('https://www.facebook.com/cdalbatros')}
+            />
+
+            <TwitterSquareFilled
+              style={{color: '#fff', fontSize: '20px', cursor: 'pointer'}}
+              onClick={() => onMediaClick('https://twitter.com/CDAlbatros1941')}
+            />
           </div>
         </Col>
       </Row>

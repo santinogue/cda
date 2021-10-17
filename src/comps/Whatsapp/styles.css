@@ -1,0 +1,14 @@
+.whatsapp-container {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: #25d366;
+  box-shadow: -1px 0px 6px black;
+  cursor: pointer;
+}

@@ -3,6 +3,7 @@ import { Form, Input, Button } from 'antd';
 import { MailFilled, PhoneFilled } from '@ant-design/icons';
 
 import Logo from 'images/logo_hd.png';
+import LazyShow from 'comps/LazyShow';
 
 import './styles.css';
 
@@ -34,11 +35,15 @@ const Contact = () => {
     <>
       <Row gutter={[16, 16]}>
         <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
-          <Map />
+          <LazyShow>
+            <Map />
+          </LazyShow>
         </Col>
 
         <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
-          <EmailForm />
+          <LazyShow>
+            <EmailForm />
+          </LazyShow>
         </Col>
       </Row>
 

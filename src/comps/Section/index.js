@@ -1,5 +1,7 @@
 import { Grid } from 'antd';
 
+import LazyShow from 'comps/LazyShow';
+
 import './styles.css';
 
 const Section = ({ children, title, style, bgColor, fontColor, theme = 'light' }) => {
@@ -27,12 +29,13 @@ const Section = ({ children, title, style, bgColor, fontColor, theme = 'light' }
           ...style,
         }}
       >
-        {/* {title && <Divider style={{color: fontColor}} orientation="left">{title}</Divider>} */}
 
         {title &&
-          <div className='title-container'>
-            <h1 style={{color: fontColor, ...titleStyle}}>{title}</h1>
-          </div>
+          <LazyShow>
+            <div className='title-container'>
+              <h1 style={{color: fontColor, ...titleStyle}}>{title}</h1>
+            </div>
+          </LazyShow>
         }
 
         {children}
