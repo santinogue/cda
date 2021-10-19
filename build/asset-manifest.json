@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.63bdeee8.chunk.css",
-    "main.js": "/static/js/main.c2812219.chunk.js",
-    "main.js.map": "/static/js/main.c2812219.chunk.js.map",
+    "main.js": "/static/js/main.12081575.chunk.js",
+    "main.js.map": "/static/js/main.12081575.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1f585cce.js",
     "runtime-main.js.map": "/static/js/runtime-main.1f585cce.js.map",
     "static/css/2.c1d968f6.chunk.css": "/static/css/2.c1d968f6.chunk.css",
@@ -29,7 +29,7 @@
     "static/media/dt5.png": "/static/media/dt5.5c5a2062.png",
     "static/media/funcional.jpg": "/static/media/funcional.0e57b2c7.jpg",
     "static/media/futbol.png": "/static/media/futbol.4c76fbba.png",
-    "static/media/handball.png": "/static/media/handball.1445f69e.png",
+    "static/media/handball.png": "/static/media/handball.1c27e265.png",
     "static/media/historia1.png": "/static/media/historia1.71f48cba.png",
     "static/media/historia2.png": "/static/media/historia2.c2a8398c.png",
     "static/media/hit.png": "/static/media/hit.e70c2854.png",
@@ -45,6 +45,6 @@
     "static/css/2.c1d968f6.chunk.css",
     "static/js/2.72c51515.chunk.js",
     "static/css/main.63bdeee8.chunk.css",
-    "static/js/main.c2812219.chunk.js"
+    "static/js/main.12081575.chunk.js"
   ]
 }
