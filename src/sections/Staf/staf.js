@@ -24,7 +24,7 @@ const staf = [
     image: 'staf/dt4.png',
   },
   {
-    name: 'DT preinfantiles, infantiles y cadetes',
+    name: 'Coordinador de Formativas',
     position: 'Andrés Jones',
     desc: 'Es entrenador Nivel 3 y certificado FIBA, nos acompaña desde el año 2017. Es entrenador de las categorías preinfantles, infantiles y cadetes.',
     image: 'staf/dt5.png',
