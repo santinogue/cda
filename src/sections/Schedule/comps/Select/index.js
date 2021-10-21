@@ -2,27 +2,34 @@ import { Select } from 'antd';
 import { useState, useEffect } from 'react';
 
 import times from 'sections/Schedule/times';
+import timesBasket from 'sections/Schedule/times_basket';
 
 const { Option } = Select;
 
-const ActivitySelect = ({ onSelectActivity }) => {
-  const options = Object.keys(times);
+const ActivitySelect = ({ onSelectActivity, timesKey }) => {
+  const currentTimes = timesKey === 'timesBasket' ? timesBasket : times;
+
+  const options = Object.keys(currentTimes).map(name => name.split('_').join(' '));
   const [selectedActivity, setSelectedActivity] = useState();
 
+
   const onChange = value => {
+    const key = value.split(' ').join('_').toLowerCase();
     setSelectedActivity(value);
-    onSelectActivity(times[value]);
+    onSelectActivity(currentTimes[key]);
   }
 
   useEffect(() => {
-    onSelectActivity(times.funcional);
+    onSelectActivity(
+      timesKey === 'timesBasket' ? currentTimes.femenino : currentTimes.funcional
+    );
   }, [])
 
   return (
     <Select
       showSearch
       style={{ width: 200, float: 'left', margin: '0 0 20px' }}
-      defaultValue='funcional'
+      defaultValue={timesKey === 'timesBasket' ? 'femenino' : 'funcional'}
       value={selectedActivity}
       placeholder="Seleccionar actividad"
       optionFilterProp="children"

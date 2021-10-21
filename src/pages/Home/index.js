@@ -102,6 +102,10 @@ const Home = () => {
           <Schedule />
         </Section>
 
+        <Section title='Horarios Basquetbol'>
+          <Schedule timesKey='timesBasket' />
+        </Section>
+
         <Section title='Nuestro Staf' theme='dark' id='section_5'>
           <Staf />
         </Section>

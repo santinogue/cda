@@ -1,15 +1,19 @@
+import emailjs from 'emailjs-com';
 import { Row, Col, Grid } from 'antd';
 import { Form, Input, Button } from 'antd';
+import { useHistory } from 'react-router-dom';
 import { MailFilled, PhoneFilled } from '@ant-design/icons';
 
-import Logo from 'images/logo_hd.png';
+import Logo from 'images/logo_hd_small.png';
 import LazyShow from 'comps/LazyShow';
 
 import './styles.css';
+import { useEffect } from 'react';
 
 const Contact = ({ hideLastRow }) => {
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
+  const history = useHistory();
 
   let currentBreakpoint = Object.entries(screens).filter(screen => !!screen[1]);
   currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
@@ -37,7 +41,7 @@ const Contact = ({ hideLastRow }) => {
     });
   };
 
-  const onGoToPage = () => {};
+  const onGoToPage = pathname => history.push(pathname);
 
   return (
     <>
@@ -119,7 +123,7 @@ const Contact = ({ hideLastRow }) => {
 
             <div className='info-list-item'>
               <PhoneFilled style={{color: '#fff'}}/>
-              <p style={pStyle}>23056789</p>
+              <p style={pStyle}>2336 3047</p>
             </div>
           </div>
         </Col>
@@ -138,17 +142,39 @@ const Map = () => {
 
 const EmailForm = () => {
   const { TextArea } = Input;
-
+  const [form] = Form.useForm();
   const tailLayout = {
     wrapperCol: {
       span: 24,
     },
   };
 
-  const [form] = Form.useForm();
+  useEffect(() => {
+    emailjs.init("user_6tPAAbfZa88W8lgbqyb8q");
+  }, []);
+
+
 
   const onFinish = (values) => {
     console.log(values);
+
+    const templateParams = {
+      from_name: values.name,
+      subject: values.subject,
+      user_message: values.message,
+      reply_to: values.email,
+    };
+
+    emailjs.send('service_and6xzx', 'template_lzw46yb', templateParams, 'user_6tPAAbfZa88W8lgbqyb8q')
+      .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          document.body.style.cursor='default';
+          alert("Correo enviado. Revisa tu casilla de correo, pronto estaremos en contacto.");
+      }, function(error) {
+          console.log('FAILED...', error);
+          document.body.style.cursor='default';
+          alert("No es posible enviar el correo en este momento. Por favor contáctate por otro medio, como whatsapp.");
+      });
   };
 
 
@@ -177,6 +203,18 @@ const EmailForm = () => {
           ]}
         >
           <Input type='email'/>
+        </Form.Item>
+
+        <Form.Item
+          name="subject"
+          label="Asunto"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
         </Form.Item>
 
         <Form.Item

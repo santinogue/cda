@@ -24,22 +24,10 @@ const actividades =  [
     desc: 'Entrenamiento físico y mental, uniendo el dinamismo y la fuerza muscular con el control mental, la respiración y la relajación.'
   },
   {
-    title: 'Zumba',
-    image: 'zumba.png',
-    contacto: '099 354 960',
-    desc: 'Desarrollar, fortalecer y dar flexibilidad al cuerpo mediante movimientos de baile, con una serie de rutinas aeróbicas.'
-  },
-  {
     title: 'Active Gap',
     image: 'gap.png',
     contacto: '099 354 960',
     desc: 'Clase colectiva donde se trabaja la parte central del cuerpo a través de ejercicios específicos, con poco peso y un número elevado de repeticiones al ritmo de la música.'
-  },
-  {
-    title: 'Aerolocal',
-    image: 'aerolocal.png',
-    contacto: '099 354 960',
-    desc: 'Es un trabajo aeróbico con patrones coreográficos simples, de bajo impacto articular, que combina con ejercicios localizados, y permite mejorar la resistencia aeróbica, modelar el cuerpo y perder peso.'
   },
   {
     title: 'Hit',

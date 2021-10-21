@@ -73,7 +73,7 @@ export const orderAvailableTimes = availableTimes => {
       render: present => present && <CheckCircleOutlined />,
     },
     {
-      title: 'Marters',
+      title: 'Martes',
       dataIndex: 'tu',
       key: 'tu',
       render: present => present && <CheckCircleOutlined />,

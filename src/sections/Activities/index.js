@@ -18,7 +18,6 @@ const Activities = () => {
   const fstRow = [...Array(4).keys()];
   const sndRow = [...Array(4).keys()].map(e => e + 4);
   const thdtRow = [...Array(4).keys()].map(e => e + 8);
-  const lstRow = [...Array(2).keys()].map(e => e + 12);
 
   const renderActivity = index => {
     const actData = activities[index];
@@ -62,10 +61,6 @@ const Activities = () => {
 
       <Row gutter={[16, 16]}>
         {thdtRow.map(e => renderActivity(e))}
-      </Row>
-
-      <Row gutter={[16, 16]}>
-        {lstRow.map(e => renderActivity(e))}
       </Row>
     </>
   )
