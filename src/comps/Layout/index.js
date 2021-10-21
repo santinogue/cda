@@ -35,7 +35,8 @@ const PageLayout = ({ children }) => {
           width: '100%',
           position: 'fixed',
           background: '#171742',
-          boxShadow: '1px 1px 9px black'
+          boxShadow: '1px 1px 9px black',
+          padding: '0',
         }
       }>
         <div className='header-content'>
