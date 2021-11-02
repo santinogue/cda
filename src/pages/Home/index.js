@@ -98,13 +98,14 @@ const Home = () => {
           <Activities />
         </Section>
 
-        <Section title='Horarios' id='section_4'>
+        <Section title='Horarios Basquetbol' id='section_4'>
+          <Schedule timesKey='timesBasket' />
+        </Section>
+
+        <Section title='Horarios'>
           <Schedule />
         </Section>
 
-        <Section title='Horarios Basquetbol'>
-          <Schedule timesKey='timesBasket' />
-        </Section>
 
         <Section title='Nuestro Staf' theme='dark' id='section_5'>
           <Staf />

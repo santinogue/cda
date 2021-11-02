@@ -62,7 +62,7 @@ const actividades =  [
   {
     title: 'Colonia ',
     image: 'colonia.png',
-    contacto: '095 598 044',
+    contacto: '093 877 346',
     desc: 'Colonia de vacaciones entre los meses de Diciembre y Febrero para niños de entre 5 y 12 años.'
   },
   {

@@ -29,6 +29,12 @@ const staf = [
     desc: 'Es entrenador Nivel 3 y certificado FIBA, nos acompaña desde el año 2017. Es entrenador de las categorías preinfantles, infantiles y cadetes.',
     image: 'staf/dt5.png',
   },
+  {
+    name: 'Asistente Tecnico',
+    position: 'Alvin Chimanoski',
+    desc: 'Asistente técnico del plantel principal y U21.',
+    image: 'staf/dt6.png',
+  },
 ];
 
 export default staf;

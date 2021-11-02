@@ -15,7 +15,7 @@ const Staf = () => {
   const smallScreen = ['xs', 'sm'].includes(currentBreakpoint);
   const rowStyle = smallScreen ? {} : {margin: 0};
 
-  const fstRow = [...Array(5).keys()];
+  const fstRow = [...Array(6).keys()];
 
   const renderActivity = index => {
     const stafData = staf[index];
