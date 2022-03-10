@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef3be3ef.chunk.css",
-    "main.js": "/static/js/main.f3900f81.chunk.js",
-    "main.js.map": "/static/js/main.f3900f81.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7f0f5e25.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7f0f5e25.js.map",
+    "main.css": "/static/css/main.92f992bf.chunk.css",
+    "main.js": "/static/js/main.81ddc77e.chunk.js",
+    "main.js.map": "/static/js/main.81ddc77e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.dfaa3fcf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.dfaa3fcf.js.map",
     "static/css/2.c1d968f6.chunk.css": "/static/css/2.c1d968f6.chunk.css",
-    "static/js/2.73ff628a.chunk.js": "/static/js/2.73ff628a.chunk.js",
-    "static/js/2.73ff628a.chunk.js.map": "/static/js/2.73ff628a.chunk.js.map",
-    "static/js/3.d3142e72.chunk.js": "/static/js/3.d3142e72.chunk.js",
-    "static/js/3.d3142e72.chunk.js.map": "/static/js/3.d3142e72.chunk.js.map",
+    "static/js/2.51344b6f.chunk.js": "/static/js/2.51344b6f.chunk.js",
+    "static/js/2.51344b6f.chunk.js.map": "/static/js/2.51344b6f.chunk.js.map",
+    "static/js/3.c6ed6643.chunk.js": "/static/js/3.c6ed6643.chunk.js",
+    "static/js/3.c6ed6643.chunk.js.map": "/static/js/3.c6ed6643.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.c1d968f6.chunk.css.map": "/static/css/2.c1d968f6.chunk.css.map",
-    "static/css/main.ef3be3ef.chunk.css.map": "/static/css/main.ef3be3ef.chunk.css.map",
-    "static/js/2.73ff628a.chunk.js.LICENSE.txt": "/static/js/2.73ff628a.chunk.js.LICENSE.txt",
+    "static/css/main.92f992bf.chunk.css.map": "/static/css/main.92f992bf.chunk.css.map",
+    "static/js/2.51344b6f.chunk.js.LICENSE.txt": "/static/js/2.51344b6f.chunk.js.LICENSE.txt",
     "static/media/aerobica.png": "/static/media/aerobica.c7b5e64c.png",
     "static/media/aerolocal.png": "/static/media/aerolocal.239f640e.png",
     "static/media/banner1 copy.png": "/static/media/banner1 copy.697589d7.png",
@@ -52,10 +52,10 @@
     "static/media/zumba.png": "/static/media/zumba.f9ac15ee.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7f0f5e25.js",
+    "static/js/runtime-main.dfaa3fcf.js",
     "static/css/2.c1d968f6.chunk.css",
-    "static/js/2.73ff628a.chunk.js",
-    "static/css/main.ef3be3ef.chunk.css",
-    "static/js/main.f3900f81.chunk.js"
+    "static/js/2.51344b6f.chunk.js",
+    "static/css/main.92f992bf.chunk.css",
+    "static/js/main.81ddc77e.chunk.js"
   ]
 }

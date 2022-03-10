@@ -21,7 +21,7 @@ const ActivitySelect = ({ onSelectActivity, timesKey }) => {
 
   useEffect(() => {
     onSelectActivity(
-      timesKey === 'timesBasket' ? currentTimes.femenino : currentTimes.funcional
+      timesKey === 'timesBasket' ? currentTimes.femenino_u19 : currentTimes.funcional
     );
   }, [])
 
@@ -29,7 +29,7 @@ const ActivitySelect = ({ onSelectActivity, timesKey }) => {
     <Select
       showSearch
       style={{ width: 200, float: 'left', margin: '0 0 20px' }}
-      defaultValue={timesKey === 'timesBasket' ? 'femenino' : 'funcional'}
+      defaultValue={timesKey === 'timesBasket' ? 'femenino_u19' : 'funcional'}
       value={selectedActivity}
       placeholder="Seleccionar actividad"
       optionFilterProp="children"
