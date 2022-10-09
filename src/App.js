@@ -12,6 +12,7 @@ import {
 
 import Home from './pages/Home';
 import About from './pages/About';
+import Penca from './pages/Penca';
 
 const App = () => {
   return (
@@ -24,6 +25,9 @@ const App = () => {
             </Route>
             <Route path="/club">
               <About />
+            </Route>
+            <Route path="/penca">
+              <Penca />
             </Route>
           </Switch>
         </ParallaxProvider>

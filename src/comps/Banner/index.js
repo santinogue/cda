@@ -2,7 +2,7 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 
 import './styles.css';
 
-const Banner = ({imageSrc, text}) => {
+const Banner = ({imageSrc, text, height = 500}) => {
   return (
     // <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
     //    <img src={require(`images/banners/${imageSrc}`).default} alt='banner' style={{width: '100%'}} />
@@ -22,7 +22,7 @@ const Banner = ({imageSrc, text}) => {
       ]}
       style={{
           width: '100vw',
-          height: '500px',
+          height: `${height}px`,
       }}
     >
       <h1 className='banner-overlay'>{text}</h1>

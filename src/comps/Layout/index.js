@@ -9,7 +9,8 @@ const PageLayout = ({ children }) => {
   const { Header, Content } = Layout;
 
   const pathname = window.location.pathname;
-  const isHome = pathname !== '/club';
+  const isHome = pathname !== '/club' && pathname !== '/penca';
+  const isPenca = pathname === '/penca';
 
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
@@ -54,10 +55,11 @@ const PageLayout = ({ children }) => {
             <Menu.Item onClick={() => isHome ? onGoToSection('section_1') : onGoToPage('/')} key="1">Inicio</Menu.Item>
             {isHome && smallScreen && <Menu.Item onClick={() => onGoToSection('section_2')} key="2">Noticias</Menu.Item>}
             {isHome && <Menu.Item onClick={() => onGoToPage('/club')} key="3">El club</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_3')} key="4">Actividades</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_4')} key="5">Horarios</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_5')} key="6">Staf</Menu.Item>}
-            <Menu.Item onClick={() => onGoToSection('section_6')} key="7">Contacto</Menu.Item>
+            {isHome && <Menu.Item onClick={() => onGoToPage('/penca')} key="4">Penca DTA</Menu.Item>}
+            {isHome && <Menu.Item onClick={() => onGoToSection('section_3')} key="5">Actividades</Menu.Item>}
+            {isHome && <Menu.Item onClick={() => onGoToSection('section_4')} key="6">Horarios</Menu.Item>}
+            {isHome && <Menu.Item onClick={() => onGoToSection('section_5')} key="7">Staf</Menu.Item>}
+            {!isPenca && <Menu.Item onClick={() => onGoToSection('section_6')} key="8">Contacto</Menu.Item>}
           </Menu>
         </div>
       </Header>

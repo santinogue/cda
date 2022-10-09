@@ -112,7 +112,7 @@ const Home = () => {
         </Section>
 
         <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6'>
-            <Contact />
+          <Contact />
         </Section>
       </PageLayout>
   );
