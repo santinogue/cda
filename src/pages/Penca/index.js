@@ -37,7 +37,7 @@ const Penca = () => {
       message: 'Penca DTA 2022',
       duration: 30,
       description:
-        'Completa la penca eligiendo la fecha que deseas pronosticar. La mejor forma de hacerlo es pronosticar todas las fechas en simultáneo.',
+        'Completa la penca eligiendo la fecha que deseas pronosticar. Puedes pronosticar todas fechas ahora, o hacerlo fecha a fecha.',
       onClick: () => {
         console.log('Notification Clicked!');
       },
