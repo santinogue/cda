@@ -1,14 +1,5 @@
 const fechas =
 {
-  fecha_1: {
-    nombre: 'Fecha 1',
-    partido_1: { equipo_1: 'Albatros', equipo_2: 'Welcome', id: 'partido_1'},
-    partido_2: { equipo_1: 'Layva', equipo_2: 'Reducto', id: 'partido_2'},
-    partido_3: { equipo_1: 'Atenas', equipo_2: 'Bohemios', id: 'partido_3'},
-    partido_4: { equipo_1: 'Capurro', equipo_2: 'Yale', id: 'partido_4'},
-    partido_5: { equipo_1: 'Paysandu', equipo_2: 'Marne', id: 'partido_5'},
-    partido_6: { equipo_1: 'Juventud', equipo_2: 'Montevideo', id: 'partido_6'},
-  },
   fecha_2: {
     nombre: 'Fecha 2',
     partido_1: { equipo_1: 'Montevideo', equipo_2: 'Albatros', id: 'partido_1'},

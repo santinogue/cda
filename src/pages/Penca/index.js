@@ -1,8 +1,7 @@
 import emailjs from 'emailjs-com';
 import { useState, useEffect} from 'react';
 import { Select, Button, Input } from 'antd';
-import { InfoCircleOutlined } from '@ant-design/icons';
-import { Row, Col, Grid, notification, message, Statistic, Typography } from 'antd';
+import { Row, Col, Grid, notification, message, Typography } from 'antd';
 
 import Banner from 'comps/Banner';
 import PageLayout from 'comps/Layout';
@@ -22,14 +21,13 @@ const Penca = () => {
   const [email, setEmail] = useState();
   const [fullName, setFullName] = useState();
   const [forecast, setForecast] = useState({...fechas});
-  const [selectedFecha, setSelectedFecha] = useState('fecha_1');
+  const [selectedFecha, setSelectedFecha] = useState('fecha_2');
 
   // Code used to make the page responsive.
   let currentBreakpoint = Object.entries(screens).filter(screen => !!screen[1]);
   currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
   currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
   const breakpointsCols = {xs: 24, sm: 24, md: 16, lg: 10, xl: 10, xxl: 10};
-  const breakpointsFlex = {xs: 100, sm: 50, md: 50, lg: 25, xl: 25, xxl: 25};
 
   useEffect(() => {
     emailjs.init("user_6tPAAbfZa88W8lgbqyb8q");
@@ -121,7 +119,7 @@ const Penca = () => {
         <Select
           showSearch
           style={{ width: 200, float: 'left', margin: '0 0 20px' }}
-          defaultValue={'fecha_1'}
+          defaultValue={'fecha_2'}
           value={selectedFecha}
           placeholder="Seleccionar fecha"
           optionFilterProp="children"
