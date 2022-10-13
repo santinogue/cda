@@ -1,7 +1,8 @@
 import emailjs from 'emailjs-com';
 import { useState, useEffect} from 'react';
 import { Select, Button, Input } from 'antd';
-import { Row, Col, Grid, notification, message } from 'antd';
+import { InfoCircleOutlined } from '@ant-design/icons';
+import { Row, Col, Grid, notification, message, Statistic, Typography } from 'antd';
 
 import Banner from 'comps/Banner';
 import PageLayout from 'comps/Layout';
@@ -17,6 +18,7 @@ const { Option } = Select;
 const Penca = () => {
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
+  const { Paragraph } = Typography;
   const [email, setEmail] = useState();
   const [fullName, setFullName] = useState();
   const [forecast, setForecast] = useState({...fechas});
@@ -27,6 +29,7 @@ const Penca = () => {
   currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
   currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
   const breakpointsCols = {xs: 24, sm: 24, md: 16, lg: 10, xl: 10, xxl: 10};
+  const breakpointsFlex = {xs: 100, sm: 50, md: 50, lg: 25, xl: 25, xxl: 25};
 
   useEffect(() => {
     emailjs.init("user_6tPAAbfZa88W8lgbqyb8q");
@@ -143,11 +146,25 @@ const Penca = () => {
       </Section>
 
       <Section>
+        <Paragraph>
+          <pre>
+            Recuerda que para que tu pronóstico pueda participar de la penca, debes entregar el comprobante de pago. <br></br>
+            Puedes enviar el comprobante por email a <b>clubdalbatros@gmail.com</b>, indicando tu nombre y apellido. <br></br>
+            También puedes enviar el comprobante al celular de secretaría <b>092 684 814</b>
+          </pre>
+        </Paragraph>
+
+        <Row style={{marginBottom: 20}}>
+          <Paragraph style={{color: 'rgb(172, 36, 39)', fontWeight: 'bold'}}>
+            Banco: Scotiabank, Cuenta corriente nro: 3564204800, Sucursal nro: 002, Beneficiario: Club Deportivo Albatros
+          </Paragraph>
+        </Row>
+
         <Row style={{marginBottom: 20}}>
           <Col span={breakpointsCols[currentBreakpoint]}>
             <Input placeholder="Nombre y Apellido" type="text" value={fullName} onChange={onChangeFullName} />
           </Col>
-          </Row>
+        </Row>
 
         <Row style={{marginBottom: 20}}>
           <Col span={breakpointsCols[currentBreakpoint]}>
