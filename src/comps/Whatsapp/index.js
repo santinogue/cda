@@ -4,7 +4,7 @@ import './styles.css';
 
 const Whatsapp = () => {
   const onWhatsAppClick = () => {
-    window.open('https://api.whatsapp.com/send?phone=59895527333', '_blank').focus();
+    window.open('https://api.whatsapp.com/send?phone=59892684814', '_blank').focus();
   }
 
   return (

@@ -123,7 +123,7 @@ const Contact = ({ hideLastRow }) => {
 
             <div className='info-list-item'>
               <PhoneFilled style={{color: '#fff'}}/>
-              <p style={pStyle}>2336 3047</p>
+              <p style={pStyle}>092 684 814</p>
             </div>
           </div>
         </Col>
