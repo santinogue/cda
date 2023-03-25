@@ -22,7 +22,7 @@ const PageFooter = () => {
     <Footer style={{ textAlign: 'center', background: '#ac2427', color: '#fff'}}>
       <Row gutter={[16, 16]}>
         <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
-          Copyright © 2021 Club Deportivo Albatros. Todos los derechos reservados
+          Copyright © 2023 Club Deportivo Albatros. Todos los derechos reservados
         </Col>
 
         <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>

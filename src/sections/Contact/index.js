@@ -123,7 +123,12 @@ const Contact = ({ hideLastRow }) => {
 
             <div className='info-list-item'>
               <PhoneFilled style={{color: '#fff'}}/>
-              <p style={pStyle}>092 684 814</p>
+              <p style={pStyle}>Club Social / Gym | 091 524 022</p>
+            </div>
+
+            <div className='info-list-item'>
+              <PhoneFilled style={{color: '#fff'}}/>
+              <p style={pStyle}>Secretaría / Basketball | 092 684 814</p>
             </div>
           </div>
         </Col>

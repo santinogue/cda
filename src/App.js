@@ -26,9 +26,6 @@ const App = () => {
             <Route path="/club">
               <About />
             </Route>
-            <Route path="/penca">
-              <Penca />
-            </Route>
           </Switch>
         </ParallaxProvider>
       </div>

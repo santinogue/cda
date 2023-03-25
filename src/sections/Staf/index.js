@@ -34,7 +34,7 @@ const Staf = () => {
           }
         >
           <Meta
-            title={`${stafData.name} | ${stafData.position}`}
+            title={`${stafData.name} ${stafData.position}`}
             description={smallestBreakPoint ? '' : stafData.desc}
           />
         </Card>
