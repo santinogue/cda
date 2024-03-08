@@ -1,0 +1,45 @@
+name: Deploy to Remote Server
+
+on:
+  release:
+    types: [created]
+
+env:
+  SERVER_IP: 165.227.85.182
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.16.0'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build the project
+        env:
+          CI: false
+        run: yarn build
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Copy files to remote
+        run: scp -r ./build/*  root@$SERVER_IP:/var/www/cdalbatros.com.uy/
+
+      - name: Restart nginx on remote
+        run: ssh root@$SERVER_IP 'sudo systemctl restart nginx'
