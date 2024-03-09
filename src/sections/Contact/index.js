@@ -96,7 +96,7 @@ const Contact = ({ hideLastRow }) => {
             <Col span={12} style={{minWidth: '100px'}}>
               <div className='pages-list'>
                 <a onClick={() => onGoToSection('section_4')}>Horarios</a>
-                <a onClick={() => onGoToSection('section_5')}>Staf</a>
+                <a onClick={() => onGoToSection('section_5')}>Staff</a>
                 <a onClick={() => onGoToPage('club')}>El Club</a>
               </div>
             </Col>

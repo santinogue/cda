@@ -57,7 +57,7 @@ const PageLayout = ({ children }) => {
             {isHome && <Menu.Item onClick={() => onGoToPage('/club')} key="3">El club</Menu.Item>}
             {isHome && <Menu.Item onClick={() => onGoToSection('section_3')} key="5">Actividades</Menu.Item>}
             {isHome && <Menu.Item onClick={() => onGoToSection('section_4')} key="6">Horarios</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_5')} key="7">Staf</Menu.Item>}
+            {isHome && <Menu.Item onClick={() => onGoToSection('section_5')} key="7">Staff</Menu.Item>}
             {!isPenca && <Menu.Item onClick={() => onGoToSection('section_6')} key="8">Contacto</Menu.Item>}
           </Menu>
         </div>

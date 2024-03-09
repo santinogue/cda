@@ -107,7 +107,7 @@ const Home = () => {
         </Section>
 
 
-        <Section title='Nuestro Staf' theme='dark' id='section_5'>
+        <Section title='Nuestro Staff' theme='dark' id='section_5'>
           <Staf />
         </Section>
 
