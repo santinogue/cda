@@ -39,7 +39,7 @@ jobs:
           chmod 644 ~/.ssh/known_hosts
 
       - name: Copy files to remote
-        run: scp -r ./build/*  root@$SERVER_IP:/var/www/cdalbatros.com.uy/
+        run: scp -r ./build/*  root@$SERVER_IP:/root/cda/build/
 
       - name: Restart nginx on remote
         run: ssh root@$SERVER_IP 'sudo systemctl restart nginx'
