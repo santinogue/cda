@@ -103,27 +103,27 @@ const Home = () => {
           <Activities />
         </Section>
 
-        <Section title='Horarios Basquetbol' id='section_4' key='section_4'>
+        <Section title='Horarios Basquetbol' id='section_times_basket' key='section_4'>
           <Schedule times={timesBasket} defaultTime='escuelita' />
         </Section>
 
-        <Section title='Horarios' key='section_5'>
+        <Section title='Horarios' key='section_times_gym'>
           <Schedule times={times} defaultTime='funcional' />
         </Section>
 
-        <Section title='Horarios Boxeo y Kickboxing' key='section_5'>
+        <Section title='Horarios Boxeo y Kickboxing' key='section_times_box'>
           <Schedule times={timesBoxeo} defaultTime='boxeo' />
         </Section>
 
-        <Section title='Horarios Handball' key='section_6'>
+        <Section title='Horarios Handball' key='section_times_handball'>
           <Schedule times={timesHandball} defaultTime='handball' />
         </Section>
 
-        <Section title='Nuestro Staff' theme='dark' id='section_5' key='section_7'>
+        <Section title='Nuestro Staff' theme='dark' id='section_5' key='section_staff'>
           <Staff />
         </Section>
 
-        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6' key='section_8'>
+        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6' key='section_contact'>
           <Contact />
         </Section>
       </PageLayout>
