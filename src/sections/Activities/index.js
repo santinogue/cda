@@ -18,7 +18,7 @@ const Activities = () => {
   const fstRow = [...Array(4).keys()];
   const sndRow = [...Array(4).keys()].map(e => e + 4);
   const thdtRow = [...Array(4).keys()].map(e => e + 8);
-  const fourthRow = [...Array(2).keys()].map(e => e + 12);
+  const fourthRow = [...Array(1).keys()].map(e => e + 12);
 
   const renderActivity = index => {
     const actData = activities[index];
@@ -28,17 +28,18 @@ const Activities = () => {
       ? [<p>{actData.contacto}</p>] : [<PhoneOutlined key="phone" />, <p>{actData.contacto}</p>]
 
     return (
-      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`}>
+      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`} key={actData.title}>
         <LazyOpacity>
           <Card
             style={{ width: '100%', margin: '5px 0 5px' }}
             cover={
               <img
-                alt="example"
+                alt={actData.title}
                 src={require(`images/activities/${actData.image}`).default}
               />
             }
             actions={actions}
+            key={actData.title}
           >
             <Meta
               title={actData.title}

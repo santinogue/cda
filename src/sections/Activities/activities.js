@@ -48,12 +48,6 @@ const actividades =  [
     desc: 'Contamos con clases para niñas de entre 6 y 18 años.'
   },
   {
-    title: 'Fútbol 5',
-    image: 'futbol.png',
-    contacto: '098 834 906',
-    desc: 'Contamos con variedad de campeonatos masculinos y femeninos.'
-  },
-  {
     title: 'Handball',
     image: 'handball.png',
     contacto: '099 943 519',

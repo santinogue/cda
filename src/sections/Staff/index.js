@@ -1,8 +1,8 @@
 import { Row, Col, Card, Grid } from 'antd';
 
-import staf from './staf';
+import staff from './staff';
 
-const Staf = () => {
+const Staff = () => {
   const { Meta } = Card;
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
@@ -18,24 +18,25 @@ const Staf = () => {
   const fstRow = [...Array(6).keys()];
 
   const renderActivity = index => {
-    const stafData = staf[index];
+    const staffData = staff[index];
     const smallestBreakPoint = currentBreakpoint === 'xs';
 
     return (
-      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`} style={{maxWidth: '100vw'}}>
+      <Col flex={`0 1 ${breakpointsFlex[currentBreakpoint]}%`} style={{maxWidth: '100vw'}} key={staffData.name}>
         <Card
           style={{ width: '100%', margin: '5px 0 5px' }}
           cover={
             <img
-              alt="example"
+              alt={staffData.name}
               style={{maxWidth: '100vw'}}
-              src={require(`images/${stafData.image}`).default}
+              src={require(`images/${staffData.image}`).default}
             />
           }
+          key={staffData.name}
         >
           <Meta
-            title={`${stafData.name} ${stafData.position}`}
-            description={smallestBreakPoint ? '' : stafData.desc}
+            title={`${staffData.name} ${staffData.position}`}
+            description={smallestBreakPoint ? '' : staffData.desc}
           />
         </Card>
       </Col>
@@ -51,4 +52,4 @@ const Staf = () => {
   )
 };
 
-export default Staf;
+export default Staff;

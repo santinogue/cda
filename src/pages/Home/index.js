@@ -6,8 +6,13 @@ import Activities from 'sections/Activities';
 import Schedule from 'sections/Schedule';
 import Contact from 'sections/Contact';
 import Section from 'comps/Section';
-import Staf from 'sections/Staf';
+import Staff from 'sections/Staff';
 import PageLayout from 'comps/Layout';
+
+import times from 'sections/Schedule/times';
+import timesBasket from 'sections/Schedule/times_basket';
+import timesHandball from 'sections/Schedule/times_handball';
+import timesBoxeo from 'sections/Schedule/times_boxeo';
 
 import './styles.css';
 
@@ -84,7 +89,7 @@ const Home = () => {
           </div>}
         </div>
 
-        {smallScreen && <Section title='Seguinos en Twitter' theme='dark' id='section_2'>
+        {smallScreen && <Section title='Seguinos en Twitter' theme='dark' id='section_2' key='section_2'>
           <div className='twitter-container'>
             <TwitterTimelineEmbed
               sourceType="profile"
@@ -94,24 +99,31 @@ const Home = () => {
           </div>
         </Section>}
 
-        <Section title='Actividades' id='section_3'>
+        <Section title='Actividades' id='section_3' key='section_3'>
           <Activities />
         </Section>
 
-        <Section title='Horarios Basquetbol' id='section_4'>
-          <Schedule timesKey='timesBasket' />
+        <Section title='Horarios Basquetbol' id='section_4' key='section_4'>
+          <Schedule times={timesBasket} defaultTime='escuelita' />
         </Section>
 
-        <Section title='Horarios'>
-          <Schedule />
+        <Section title='Horarios' key='section_5'>
+          <Schedule times={times} defaultTime='funcional' />
         </Section>
 
-
-        <Section title='Nuestro Staff' theme='dark' id='section_5'>
-          <Staf />
+        <Section title='Horarios Boxeo y Kickboxing' key='section_5'>
+          <Schedule times={timesBoxeo} defaultTime='boxeo' />
         </Section>
 
-        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6'>
+        <Section title='Horarios Handball' key='section_6'>
+          <Schedule times={timesHandball} defaultTime='handball' />
+        </Section>
+
+        <Section title='Nuestro Staff' theme='dark' id='section_5' key='section_7'>
+          <Staff />
+        </Section>
+
+        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6' key='section_8'>
           <Contact />
         </Section>
       </PageLayout>

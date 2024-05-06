@@ -1,0 +1,58 @@
+const timesByActivity = {
+  boxeo: {
+    mon: [{start_time: '08:30', end_time: '09:30'}, {start_time: '17:15', end_time: '18:15'}],
+    tu: [{start_time: '08:30', end_time: '09:30'}],
+    wed: [{start_time: '08:30', end_time: '09:30'}, {start_time: '17:15', end_time: '18:15'}],
+    th: [{start_time: '08:30', end_time: '09:30'}],
+    fri: [{start_time: '08:30', end_time: '09:30'}, {start_time: '17:15', end_time: '18:15'}],
+    sat: [],
+    sun: [],
+  },
+  principiantes: {
+    mon: [],
+    tu: [{start_time: '17:30', end_time: '18:30'}],
+    wed: [],
+    th: [{start_time: '17:30', end_time: '18:30'}],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+  adolescentes: {
+    mon: [],
+    tu: [{start_time: '18:45', end_time: '19:30'}],
+    wed: [],
+    th: [{start_time: '18:45', end_time: '19:30'}],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+  kickboxing: {
+    mon: [{start_time: '19:15', end_time: '20:15'}],
+    tu: [],
+    wed: [{start_time: '19:15', end_time: '20:15'}],
+    th: [],
+    fri: [{start_time: '19:15', end_time: '20:15'}],
+    sat: [],
+    sun: [],
+  },
+  boxeo_y_kickboxing: {
+    mon: [],
+    tu: [{start_time: '19:30', end_time: '20:30'}],
+    wed: [],
+    th: [{start_time: '19:30', end_time: '20:30'}],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+  boxeo_avanzado: {
+    mon: [{start_time: '20:15', end_time: '21:15'}],
+    tu: [],
+    wed: [{start_time: '20:15', end_time: '21:15'}],
+    th: [],
+    fri: [{start_time: '20:15', end_time: '21:15'}],
+    sat: [],
+    sun: [],
+  },
+}
+
+export default timesByActivity;

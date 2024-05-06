@@ -87,17 +87,17 @@ const Contact = ({ hideLastRow }) => {
           <Row>
             <Col span={12} style={{minWidth: '100px'}}>
               <div className='pages-list'>
-                <a onClick={() => onGoToSection('section_1')}>Inicio</a>
-                <a onClick={() => onGoToSection('section_2')}>Noticias</a>
-                <a onClick={() => onGoToSection('section_3')}>Actividades</a>
+                <a onClick={() => onGoToSection('section_1')} key='link1'>Inicio</a>
+                <a onClick={() => onGoToSection('section_2')} key='link2'>Noticias</a>
+                <a onClick={() => onGoToSection('section_3')} key='link3'>Actividades</a>
               </div>
             </Col>
 
             <Col span={12} style={{minWidth: '100px'}}>
               <div className='pages-list'>
-                <a onClick={() => onGoToSection('section_4')}>Horarios</a>
-                <a onClick={() => onGoToSection('section_5')}>Staff</a>
-                <a onClick={() => onGoToPage('club')}>El Club</a>
+                <a onClick={() => onGoToSection('section_4')} key='link4'>Horarios</a>
+                <a onClick={() => onGoToSection('section_5')} key='link5'>Staff</a>
+                <a onClick={() => onGoToPage('club')} key='link6'>El Club</a>
               </div>
             </Col>
           </Row>
