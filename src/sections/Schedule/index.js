@@ -5,7 +5,7 @@ import { CheckCircleOutlined } from '@ant-design/icons';
 import ActivitySelect from './comps/Select';
 import { getAvailableTimes, orderAvailableTimes, getWeekDaysAvailableOnTime, getColumns } from './utils';
 
-const Schedule = ({ timesKey }) => {
+const Schedule = ({ times, defaultTime }) => {
   const [timesData, setTimesData] = useState([]);
   const columns = getColumns(CheckCircleOutlined);
 
@@ -25,7 +25,7 @@ const Schedule = ({ timesKey }) => {
 
   return (
     <div className='schedule-container' style={{width: '100vw', maxWidth: '1400px'}} >
-      <ActivitySelect onSelectActivity={onSelectActivity} timesKey={timesKey} />
+      <ActivitySelect onSelectActivity={onSelectActivity} times={times} defaultTime={defaultTime} />
       <Table columns={columns} dataSource={timesData} pagination={false} scroll={{ x: 1400 }} />
     </div>
   );
