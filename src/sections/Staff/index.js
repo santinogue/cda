@@ -15,10 +15,9 @@ const Staff = () => {
   const smallScreen = ['xs', 'sm'].includes(currentBreakpoint);
   const rowStyle = smallScreen ? {} : {margin: 0};
 
-  const fstRow = [...Array(6).keys()];
+  // const fstRow = [...Array(6).keys()];
 
-  const renderActivity = index => {
-    const staffData = staff[index];
+  const renderActivity = (staffData) => {
     const smallestBreakPoint = currentBreakpoint === 'xs';
 
     return (
@@ -46,7 +45,7 @@ const Staff = () => {
   return (
     <>
       <Row gutter={[16, 16]} style={rowStyle}>
-        {fstRow.map(e => renderActivity(e))}
+        {staff.map(s => renderActivity(s))}
       </Row>
     </>
   )
