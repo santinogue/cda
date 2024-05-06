@@ -133,15 +133,6 @@ const timesByActivity = {
     fri: [],
     sat: [],
     sun: [],
-  },// aerolocal
-  aerolocal: {
-    mon: [],
-    tu: [],
-    wed: [],
-    th: [{start_time: '18:00', end_time: '19:00'}],
-    fri: [],
-    sat: [],
-    sun: [],
   },
 }
 
