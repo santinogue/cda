@@ -107,7 +107,7 @@ const Home = () => {
           <Schedule times={timesBasket} defaultTime='escuelita' />
         </Section>
 
-        <Section title='Horarios' key='section_times_gym'>
+        <Section title='Horarios Clases' key='section_times_gym'>
           <Schedule times={times} defaultTime='funcional' />
         </Section>
 

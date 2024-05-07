@@ -134,6 +134,15 @@ const timesByActivity = {
     sat: [],
     sun: [],
   },
+  mami_basket: {
+    mon: [],
+    tu: [{start_time: '21:00', end_time: '22:00'}],
+    wed: [],
+    th: [],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
 }
 
 export default timesByActivity;

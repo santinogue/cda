@@ -41,6 +41,12 @@ const staff = [
     desc: 'Preparador físico',
     image: 'staff/julian.jpeg',
   },
+  {
+    name: 'Alejandro Ellis',
+    position: '',
+    desc: 'Fisio',
+    image: 'staff/ale.jpeg',
+  },
 ];
 
 export default staff;
