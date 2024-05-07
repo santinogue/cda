@@ -24,7 +24,7 @@ const Schedule = ({ times, defaultTime }) => {
   }
 
   return (
-    <div className='schedule-container' style={{width: '100vw', maxWidth: '100vw'}} >
+    <div className='schedule-container' style={{width: '97vw', maxWidth: '1400px', margin: 'auto'}} >
       <ActivitySelect onSelectActivity={onSelectActivity} times={times} defaultTime={defaultTime} />
       <Table columns={columns} dataSource={timesData} pagination={false} scroll={{ x: 1400 }} />
     </div>
