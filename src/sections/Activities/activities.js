@@ -18,16 +18,28 @@ const actividades =  [
     desc: 'El entrenamiento funcional es una gama de ejercicios físicos que te permiten entrenar tus músculos para trabajar juntos y prepararlos para realizar tareas cotidianas con mayor facilidad y sin lesiones.'
   },
   {
+    title: 'Volley Social',
+    image: 'volley.jpeg',
+    contacto: '091 524 022',
+    desc: 'Te invitamos a jugar volleyball de manera social y recreativa con un profesor a cargo y muy buenas instalaciones.'
+  },
+  {
+    title: 'Bascket Social',
+    image: 'volley.jpeg',
+    contacto: '091 524 022',
+    desc: 'Te invitamos a jugar basquetbol de manera social y recreativa con un profesor a cargo y muy buenas instalaciones.'
+  },
+  {
+    title: 'Mami Basket',
+    image: 'mamibasket.jpeg',
+    contacto: '095 928 302',
+    desc: 'Invitamos a las madres de nuestros jugadores/as de formativas a jugar basquetbol e iniciarse en este deporte de manera recreativa y divertida.'
+  },
+  {
     title: 'Pilates',
     image: 'pilates.png',
     contacto: '091 524 022',
     desc: 'Entrenamiento físico y mental, uniendo el dinamismo y la fuerza muscular con el control mental, la respiración y la relajación.'
-  },
-  {
-    title: 'Active Gap',
-    image: 'gap.png',
-    contacto: '091 524 022',
-    desc: 'Clase colectiva donde se trabaja la parte central del cuerpo a través de ejercicios específicos, con poco peso y un número elevado de repeticiones al ritmo de la música.'
   },
   {
     title: 'Hit',
@@ -42,40 +54,22 @@ const actividades =  [
     desc: 'Es una actividad física, en la mayoría de los casos colectiva, la cual se realiza sobre una bicicleta estática al ritmo de la música. Este ejercicio físico presenta un importante trabajo cardiovascular, donde se trabaja mayoritariamente los grupos musculares del tren inferior.'
   },
   {
-    title: 'Aeróbica',
-    image: 'aerobica.png',
-    contacto: '099 977 270',
-    desc: 'Contamos con clases para niñas de entre 6 y 18 años.'
-  },
-  {
     title: 'Handball',
     image: 'handball.png',
     contacto: '099 943 519',
     desc: 'Nuestro plantel principal femenino participa de la Liga ACB'
   },
   {
-    title: 'Colonia ',
+    title: 'Colonia',
     image: 'colonia.png',
     contacto: '095 974 881',
     desc: 'Colonia de vacaciones entre los meses de Diciembre y Febrero para niños de entre 5 y 12 años.'
-  },
-  {
-    title: 'Aerolocal',
-    image: 'aerolocal.png',
-    contacto: '091 524 022',
-    desc: 'Aero Local es un trabajo aeróbico con patrones coreográficos, de bajo impacto articular, combinado con ejercicios localizados, que permite mejorar la resistencia aeróbica y modelar el cuerpo.'
   },
   {
     title: 'Yoga',
     image: 'yoga.png',
     contacto: '091 524 022',
     desc: 'Es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud general.'
-  },
-  {
-    title: 'TRX',
-    image: 'trx.png',
-    contacto: '091 524 022',
-    desc: 'es una modalidad deportiva que consiste en realizar ejercicios en suspensión: con la ayuda de unas cintas especiales, suspendemos en el aire parte del peso de nuestro cuerpo de manera que los músculos que han de realizar el movimiento tienen en este peso una resistencia para una tonificación efectiva.'
   },
 ]
 

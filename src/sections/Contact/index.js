@@ -140,7 +140,7 @@ const Contact = ({ hideLastRow }) => {
 const Map = () => {
   return (
     <div className='map-container'>
-      <iframe src='https://maps.google.com/maps?q=club%20albatros%20montevideo&t=&z=13&ie=UTF8&iwloc=&output=embed' frameborder="0" allowfullscreen></iframe>
+      <iframe src='https://maps.google.com/maps?q=club%20albatros%20montevideo&t=&z=13&ie=UTF8&iwloc=&output=embed' frameborder="0" allowFullScreen></iframe>
     </div>
   );
 };

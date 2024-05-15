@@ -37,6 +37,7 @@
   z-index: 2;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.45);
+  text-align: left;
 }
 
 .activityContactInfo {
