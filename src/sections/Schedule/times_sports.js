@@ -1,0 +1,58 @@
+const timesByActivity = {
+  futbol: {
+    mon: [],
+    tu: [{start_time: '19:00', end_time: '20:00'}],
+    wed: [],
+    th: [],
+    fri: [{start_time: '21:00', end_time: '22:00'}],
+    sat: [],
+    sun: [],
+  },
+  volleyball: {
+    mon: [{start_time: '20:00', end_time: '21:00'}],
+    tu: [],
+    wed: [],
+    th: [{start_time: '20:00', end_time: '21:00'}],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+  volleyball_newcom_mas_48: {
+    mon: [{start_time: '9:30', end_time: '11:15'}],
+    tu: [{start_time: '20:00', end_time: '21:00'}],
+    wed: [],
+    th: [{start_time: '9:30', end_time: '11:15'}],
+    fri: [{start_time: '20:00', end_time: '21:00'}],
+    sat: [],
+    sun: [],
+  },
+  handball_social: {
+    mon: [],
+    tu: [],
+    wed: [{start_time: '20:00', end_time: '21:00'}],
+    th: [],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+  basketball_social: {
+    mon: [{start_time: '21:00', end_time: '22:00'}],
+    tu: [],
+    wed: [{start_time: '21:00', end_time: '22:00'}],
+    th: [{start_time: '19:00', end_time: '20:00'}],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+  mami_basket: {
+    mon: [],
+    tu: [{start_time: '21:00', end_time: '22:00'}],
+    wed: [],
+    th: [],
+    fri: [],
+    sat: [],
+    sun: [],
+  },
+}
+
+export default timesByActivity;

@@ -1,5 +1,11 @@
 const staff = [
   {
+    name: 'Alvin Ellis',
+    position: '',
+    desc: 'Director Deportivo',
+    image: 'staff/alvin.png',
+  },
+  {
     name: 'Nicolás García',
     position: '',
     desc: 'Coordinador divisiones formativas. Entrenador de U15-U17-U19',
@@ -10,6 +16,12 @@ const staff = [
     position: '',
     desc: 'DT Mayores',
     image: 'staff/nico.jpeg',
+  },
+  {
+    name: 'Patricia Re',
+    position: '',
+    desc: 'Entrenadora Handball y preparadora física',
+    image: 'staff/patricia.jpeg',
   },
   {
     name: 'Camilo Navas',
@@ -30,16 +42,22 @@ const staff = [
     image: 'staff/facundo.jpeg',
   },
   {
-    name: 'Patricia Re',
-    position: '',
-    desc: 'Preparadora física y entrenadora Handball',
-    image: 'staff/patricia.jpeg',
-  },
-  {
     name: 'Julian Fabbiani',
     position: '',
     desc: 'Preparador físico',
     image: 'staff/julian.jpeg',
+  },
+  {
+    name: 'Agostina De María',
+    position: '',
+    desc: 'Nutricionista',
+    image: 'staff/agostina.png',
+  },
+  {
+    name: 'Agustín Rampa',
+    position: '',
+    desc: 'Psicólogo',
+    image: 'staff/agustin.png',
   },
   {
     name: 'Alejandro Ellis',

@@ -13,8 +13,10 @@ import times from 'sections/Schedule/times';
 import timesBasket from 'sections/Schedule/times_basket';
 import timesHandball from 'sections/Schedule/times_handball';
 import timesBoxeo from 'sections/Schedule/times_boxeo';
+import timesSports from 'sections/Schedule/times_sports';
 
 import './styles.css';
+import Sponsors from 'sections/Sponsors';
 
 const Home = () => {
   const [sliderHeight, setSliderHeight] = useState('100vh');
@@ -99,7 +101,7 @@ const Home = () => {
           </div>
         </Section>}
 
-        <Section title='Actividades' id='section_3' key='section_3'>
+        <Section title='Actividades' theme='dark' id='section_3' key='section_3'>
           <Activities />
         </Section>
 
@@ -115,6 +117,10 @@ const Home = () => {
           <Schedule times={timesBoxeo} defaultTime='boxeo' />
         </Section>
 
+        <Section title='Horarios Deportes Social' key='section_times_sports'>
+          <Schedule times={timesSports} defaultTime='volleyball' />
+        </Section>
+
         <Section title='Horarios Handball' key='section_times_handball'>
           <Schedule times={timesHandball} defaultTime='handball' />
         </Section>
@@ -123,7 +129,14 @@ const Home = () => {
           <Staff />
         </Section>
 
-        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_6' key='section_contact'>
+{
+  false && <Section title='Nuestros Sponsors' id='section_6' key='section_sponsors'>
+  <Sponsors />
+</Section>
+}
+        
+
+        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_7' key='section_contact'>
           <Contact />
         </Section>
       </PageLayout>

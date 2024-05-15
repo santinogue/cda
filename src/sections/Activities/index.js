@@ -8,7 +8,7 @@ import './styles.css';
 const Activities = () => {
   const renderActivity = (actData) => {
     return (
-      <LazyOpacity>
+      <LazyOpacity key={actData.title}>
         <article key={actData.title}>
           <ActivityCard
             {...actData}
