@@ -101,11 +101,11 @@ const Home = () => {
           </div>
         </Section>}
 
-        <Section title='Actividades' theme='dark' id='section_3' key='section_3'>
+        <Section title='Actividades' theme='dark' id='activities' key='section_3'>
           <Activities />
         </Section>
 
-        <Section title='Horarios Basquetbol' id='section_times_basket' key='section_times_basket'>
+        <Section title='Horarios Basquetbol' id='times' key='section_times_basket'>
           <Schedule times={timesBasket} defaultTime='escuelita' />
         </Section>
 
@@ -125,18 +125,18 @@ const Home = () => {
           <Schedule times={timesHandball} defaultTime='handball' />
         </Section>
 
-        <Section title='Nuestro Staff' theme='dark' id='section_5' key='section_staff'>
+        <Section title='Nuestro Staff' theme='dark' id='staff' key='section_staff'>
           <Staff />
         </Section>
 
 {
-  false && <Section title='Nuestros Sponsors' id='section_6' key='section_sponsors'>
+  false && <Section title='Nuestros Sponsors' id='sponsors' key='section_sponsors'>
   <Sponsors />
 </Section>
 }
         
 
-        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='section_7' key='section_contact'>
+        <Section title='Ponete en contacto' bgColor='#171742' fontColor='#fff' id='contact' key='section_contact'>
           <Contact />
         </Section>
       </PageLayout>

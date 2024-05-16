@@ -53,7 +53,7 @@ const timesByActivity = {
     sat: [],
     sun: [],
   },
-  hit: {
+  hiit: {
     mon: [{start_time: '19:00', end_time: '20:00'}],
     tu: [],
     wed: [{start_time: '19:00', end_time: '20:00'}],

@@ -24,8 +24,8 @@ const actividades =  [
     desc: 'Te invitamos a jugar volleyball de manera social y recreativa con un profesor a cargo y muy buenas instalaciones.'
   },
   {
-    title: 'Bascket Social',
-    image: 'volley.jpeg',
+    title: 'Basket Social',
+    image: 'basket_social.jpeg',
     contacto: '091 524 022',
     desc: 'Te invitamos a jugar basquetbol de manera social y recreativa con un profesor a cargo y muy buenas instalaciones.'
   },
@@ -37,15 +37,15 @@ const actividades =  [
   },
   {
     title: 'Pilates',
-    image: 'pilates.png',
+    image: 'pilates.jpeg',
     contacto: '091 524 022',
     desc: 'Entrenamiento físico y mental, uniendo el dinamismo y la fuerza muscular con el control mental, la respiración y la relajación.'
   },
   {
-    title: 'Hit',
-    image: 'hit.png',
+    title: 'Hiit',
+    image: 'hiit.jpeg',
     contacto: '091 524 022',
-    desc: 'El HIT es una actividad deportiva consistente en un entrenamiento interválico de alta intensidad durante corto espacio de tiempo. Se realizan ejercicios a alta intensidad que se combinan con descansos breves.'
+    desc: 'El Hiit es una actividad deportiva consistente en un entrenamiento interválico de alta intensidad durante corto espacio de tiempo. Se realizan ejercicios a alta intensidad que se combinan con descansos breves.'
   },
   {
     title: 'Indoor Cycling',

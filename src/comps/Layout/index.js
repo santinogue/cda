@@ -1,11 +1,13 @@
 import { Layout, Menu, Grid } from 'antd';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import Whatsapp from 'comps/Whatsapp';
 import PageFooter from 'comps/PageFooter';
+import { useEffect } from 'react';
 
 const PageLayout = ({ children }) => {
   const history = useHistory();
+  const location = useLocation();
   const { Header, Content } = Layout;
 
   const pathname = window.location.pathname;
@@ -19,6 +21,16 @@ const PageLayout = ({ children }) => {
   currentBreakpoint = currentBreakpoint[currentBreakpoint.length - 1];
   currentBreakpoint = !!currentBreakpoint ? currentBreakpoint[0] : currentBreakpoint;
   const smallScreen = ['xs', 'sm', 'md'].includes(currentBreakpoint);
+
+  useEffect(() => {
+    if (location.hash) {
+      document.querySelector(`${location.hash}`).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "center",
+      });
+    }
+  }, [location.hash])
 
   const onGoToSection = sectionId => {
     document.querySelector(`#${sectionId}`).scrollIntoView({
@@ -53,12 +65,12 @@ const PageLayout = ({ children }) => {
             }}
           >
             <Menu.Item onClick={() => isHome ? onGoToSection('section_1') : onGoToPage('/')} key="1">Inicio</Menu.Item>
-            {isHome && smallScreen && <Menu.Item onClick={() => onGoToSection('section_2')} key="2">Noticias</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToPage('/club')} key="3">El club</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_3')} key="5">Actividades</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_4')} key="6">Horarios</Menu.Item>}
-            {isHome && <Menu.Item onClick={() => onGoToSection('section_5')} key="7">Staff</Menu.Item>}
-            {!isPenca && <Menu.Item onClick={() => onGoToSection('section_6')} key="8">Contacto</Menu.Item>}
+            {smallScreen && <Menu.Item onClick={() => onGoToPage('#section_2')} key="2">Noticias</Menu.Item>}
+            <Menu.Item onClick={() => onGoToPage('/club')} key="3">El club</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/#activities')} key="5">Actividades</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/#times')} key="6">Horarios</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/#staff')} key="7">Staff</Menu.Item>
+            {!isPenca && <Menu.Item onClick={() => onGoToPage('/#contact')} key="8">Contacto</Menu.Item>}
           </Menu>
         </div>
       </Header>

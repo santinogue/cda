@@ -81,7 +81,7 @@ export const orderAvailableTimes = availableTimes => {
     {
       title: 'Miércoles',
       dataIndex: 'wed',
-      key: 'web',
+      key: 'wed',
       render: present => present && <CheckCircleOutlined style={{ color: '#e96264'}}/>,
     },
     {
