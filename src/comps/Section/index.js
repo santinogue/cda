@@ -18,7 +18,7 @@ const Section = ({ children, id, title, style, bgColor, fontColor, theme = 'ligh
   const titleStyle = { fontSize: `${fontSizeBreakpoints[currentBreakpoint]}px` }
 
   return (
-    <div className='section-container' style={{backgroundColor: bgColor || backgroundColor}} id={id}>
+    <section className='section-container' style={{backgroundColor: bgColor || backgroundColor}} id={id}>
       <div
         className="site-layout-background"
         style={{
@@ -40,7 +40,7 @@ const Section = ({ children, id, title, style, bgColor, fontColor, theme = 'ligh
 
         {children}
       </div>
-    </div>
+    </section>
   )
 };
 

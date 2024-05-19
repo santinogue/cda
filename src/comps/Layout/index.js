@@ -65,17 +65,19 @@ const PageLayout = ({ children }) => {
             }}
           >
             <Menu.Item onClick={() => isHome ? onGoToSection('section_1') : onGoToPage('/')} key="1">Inicio</Menu.Item>
-            {smallScreen && <Menu.Item onClick={() => onGoToPage('#section_2')} key="2">Noticias</Menu.Item>}
+            {smallScreen && <Menu.Item onClick={() => onGoToPage('/#section_2')} key="2">Noticias</Menu.Item>}
             <Menu.Item onClick={() => onGoToPage('/club')} key="3">El club</Menu.Item>
-            <Menu.Item onClick={() => onGoToPage('/#activities')} key="5">Actividades</Menu.Item>
-            <Menu.Item onClick={() => onGoToPage('/#times')} key="6">Horarios</Menu.Item>
-            <Menu.Item onClick={() => onGoToPage('/#staff')} key="7">Staff</Menu.Item>
-            {!isPenca && <Menu.Item onClick={() => onGoToPage('/#contact')} key="8">Contacto</Menu.Item>}
+            <Menu.Item onClick={() => onGoToPage('/directiva')} key="4">Directiva</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/socios')} key="5">Socios</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/#activities')} key="6">Actividades</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/#times')} key="7">Horarios</Menu.Item>
+            <Menu.Item onClick={() => onGoToPage('/#staff')} key="8">Staff</Menu.Item>
+            {!isPenca && <Menu.Item onClick={() => onGoToPage('/#contact')} key="9">Contacto</Menu.Item>}
           </Menu>
         </div>
       </Header>
 
-      <Content className="site-layout" style={{ padding: '0', margin: '64px auto 0 auto'}}>
+      <Content className="site-layout" style={{ padding: '0', margin: '64px auto 0 auto', width: '100vw'}}>
         {children}
         <PageFooter />
         <Whatsapp />
