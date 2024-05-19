@@ -1,0 +1,27 @@
+.text-container {
+  padding: 0 10%;
+}
+
+.text-container h1, h2 {
+  line-height: 60px;
+  text-align: start;
+}
+
+.text-container dt {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-container dd {
+  text-align: left;
+  font-size: 16px;
+  text-indent: 10px;
+}
+
+@media (max-width: 450px) {
+  .text-container h1 {
+    font-size: 30px;
+  }
+}
